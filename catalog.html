@@ -35,7 +35,117 @@
       </div>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter-one" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filter-price">
+            <legend>СТОИМОСТЬ</legend>
+            <div class="slider nativeMultiple">
+              <div class="nativeMultiple-one">
+                <input min="0" max="20000" value="0" name="three" type="range" />
+              </div>
+              <div class="nativeMultiple-two">
+                <input min="0" max="20000" value="15000" type="range" />
+              </div>
+            </div>
+            <div class="filter-min-price">
+              <label>
+                ОТ
+                <input type="text" name="filter-min-price" value="0">
+              </label>
+            </div>
+            <div class="filter-max-price">
+              <label>
+                ДО
+                <input type="text" name="filter-max-price" value="15000">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filter-grid">
+            <legend>СЕТКА:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="filter-grid" value="adaptive" checked>
+                  Адаптивная
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="filter-grid" value="fixed">
+                  Фиксированная
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="filter-grid" value="rubber">
+                  Резиновая
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-options">
+            <legend>ОСОБЕННОСТИ:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="slider" checked>
+                  Слайдер
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="futures">
+                  Блок преимуществ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="news" checked>
+                  Новости
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="gallery">
+                  Галерея
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="order">
+                  Корзина
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">ПОКАЗАТЬ</button>
+        </form>
+        <form class="filter-two" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>СОРТИРОВАТЬ:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="filter-sort-radio" value="price" checked>
+                  ПО ЦЕНЕ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="filter-sort-radio" value="type">
+                  ПО ТИПУ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="filter-sort-radio" value="name">
+                  ПО НАЗВАНИЮ
+                </label>
+              </li>
+            </ul>
+            <input type="image" src="img/icon-down-dir.svg" name="filter-sort-up-down" alt="Сортировать по убыванию">
+            <input type="image" src="img/icon-up-dir.svg" name="filter-sort-down-up" alt="Сортировать по возрастанию">
+          </fieldset>
+        </form>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список товаров</h2>
@@ -155,5 +265,30 @@
         </div>
       </div>
     </footer>
+    <section class="modal-write-us">
+      <h2>Напишите нам</h2>
+      <form class="modal-write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="fullname">
+          <label>
+            Ваше имя:
+            <input type="text" name="fullname" placeholder="Имя Фамилия">
+          </label>
+        </div>
+        <div class="email">
+          <label>
+            Ваш e-mail:
+            <input type="text" name="email" placeholder="example@example.com">
+          </label>
+        </div>
+        <div class="message">
+          <label>
+            Текст письма:
+            <textarea name="message" placeholder="В свободной форме"></textarea>
+          </label>
+        </div>
+        <button type="submit">ОТПРАВИТЬ</button>
+      </form>
+      <span class="modal-close">x</span>
+    </section>
   </body>
 </html>
