@@ -1,0 +1,348 @@
+/* CSS Document */
+
+.visually-hidden {
+  /* Удаляем элемент из потока документа */
+  position: absolute;
+  /* Временное решение для неверно произносимого, размазанного текста */
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  /* Скрываем вылезающий за границы контент */
+  overflow: hidden;
+  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+  border: 0;
+  padding: 0;
+  /* Вырезаем ту часть контента, которая должна отображаться. */
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  clip-path: inset(50%); 
+    /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  margin: -1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  line-height: 30px;
+
+  background-color: #eeeeee;
+}
+
+.main-navigation {
+  text-transform: uppercase;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.main-header a {
+  color: #000000;
+}
+
+.main-header a:hover {
+  color: #fb565a;
+}
+
+.main-header a:active {
+  color: #000000;
+}
+
+.main-header a:focus {
+  color: #000000;
+}
+
+.functions-list {
+  list-style: none;
+}
+
+.functions-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.features-big {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.features h3 {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.features-present {
+  list-style: none;
+}
+
+.features-present p:nth-child(1) {
+  font-size: 45px;
+  line-height: 10px;
+}
+
+.features-present p:nth-child(2) {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.main-footer {
+  background-image: url("../img/map+marker.jpg");
+  background-position: 0 -200px;
+  background-repeat: no-repeat;
+}
+
+.footer-contacts {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-contacts h4 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-social-links {
+  text-align: left;
+}
+
+.footer-social-slogan h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.footer-social-slogan p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.modal-write-us {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-write-us h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.modal-write-us-form input {
+  font: inherit;
+}
+
+.modal-write-us span {
+  color: #fecccd;
+}
+
+.modal-write-us span:hover {
+  background-color: #fb565a;
+}
+
+.modal-write-us span:active {
+  background-color: #ffeeee;
+}
+
+.button {
+  font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #fb565a;
+  border: none;
+}
+
+.button:hover {
+  background-color: #e74246;
+}
+
+.button:active {
+  background-color: #d7373b;
+}
+
+
+.button-green {
+  background-color: #00ca74;
+}
+
+.button-green:hover {
+  background-color: #00bc6c;
+}
+
+.button-green:active {
+  background-color: #00aa62;
+}
+
+.button-orange {
+  background-color: #efc84a;
+}
+
+.button-orange:hover {
+  background-color: #eab534;
+}
+
+.button-orange:active {
+  background-color: #e5a722;
+}
+
+.button-social {
+  display: flex;
+  background-color: #e1e1e1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-social:hover {
+  background-color: #e74246;
+}
+
+.button-social:active {
+  background-color: #d7373b;
+}
+
+.button-social-vk {
+  background-image: url("../img/vkicon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.page-intro h1 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.filters fieldset {
+  border-width: 0px;
+}
+
+.filter-one legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter-price {
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter-price input {
+  font: inherit;
+}
+
+.filter-grid,
+.filter-options {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.filters ul {
+  list-style: none;
+}
+
+.filters button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.sorting legend {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sorting a {
+  color: #000000;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting span {
+  font-size: 0px;
+  line-height: 18px;
+}
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog-item-popup h3 {
+  color: #000000;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.catalog-item-popup h3:hover {
+  color: #fb565a;
+}
+
+.catalog-item-popup h3:active {
+  color: #000000;
+}
+
+.pagination-item a {
+  color: #000000;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pagination-item {
+  background-color: #eeeeee;
+}
+
+.pagination-item:hover {
+  background-color: #dfdfdf;
+}
+
+.pagination-item:active {
+  background-color: #d5d5d5;
+}
+
+.pagination-item-current {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+}
+
