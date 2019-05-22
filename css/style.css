@@ -52,20 +52,21 @@ a {
   list-style: none;
 }
 
-.main-header a {
+.main-navigation a {
   color: #000000;
 }
 
-.main-header a:hover {
+.main-navigation a:hover {
   color: #fb565a;
 }
 
-.main-header a:active {
+.main-navigation a:active {
   color: #000000;
 }
 
-.main-header a:focus {
+.main-navigation a:focus {
   color: #000000;
+  border-bottom: 1px solid #fb565a;
 }
 
 .functions-list {
@@ -75,6 +76,7 @@ a {
 .functions-item h3 {
   font-size: 24px;
   line-height: 30px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -87,6 +89,7 @@ a {
 .features h3 {
   font-size: 16px;
   line-height: 24px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -97,11 +100,16 @@ a {
 .features-present p:nth-child(1) {
   font-size: 45px;
   line-height: 10px;
+  font-weight: 700;
 }
 
 .features-present p:nth-child(2) {
   font-size: 16px;
   line-height: 18px;
+}
+
+.features-present span {
+  font-size: smaller;
 }
 
 .main-footer {
@@ -230,12 +238,6 @@ a {
 
 .button-social:active {
   background-color: #d7373b;
-}
-
-.button-social-vk {
-  background-image: url("../img/vkicon.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .page-intro h1 {
