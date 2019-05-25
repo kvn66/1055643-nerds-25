@@ -49,7 +49,7 @@
           <h1>Магазин готовых шаблонов</h1>
         </div>
       </div>
-      <div class="container">
+      <div class="container catalog-columns">
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter-one" action="https://echo.htmlacademy.ru" method="get">
@@ -78,7 +78,7 @@
             </fieldset>
             <fieldset class="filter-grid">
               <legend>Сетка:</legend>
-              <ul>
+              <ul class="filter-grid-list">
                 <li>
                   <label>
                     <input type="radio" name="filter-grid" value="adaptive" checked>
@@ -101,7 +101,7 @@
             </fieldset>
             <fieldset class="filter-options">
               <legend>Особенности:</legend>
-              <ul>
+              <ul class="filter-options-list">
                 <li>
                   <label>
                     <input type="checkbox" name="slider" checked>
@@ -138,9 +138,11 @@
           </form>
         </section>
         <section class="catalog">
-          <div class="sorting-filter">
-            <fieldset class="sorting">
-              <legend>Сортировать:</legend>
+          <div class="sorting">
+            <div class="sorting-header">
+              <h2>Сортировать:</h2>
+            </div>
+            <div class="sorting-body">
               <ul class="sorting-list">
                 <li>
                   <a href="#">
@@ -168,7 +170,7 @@
                   <span>Сортировать по возрастанию</span>
                 </a>
               </div>
-            </fieldset>
+            </div>
           </div>
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="catalog-list">
@@ -283,35 +285,39 @@
       </div>
     </main>
     <footer class="main-footer">
-      <section class="footer-contacts">
-        <h4>NЁRDS DESIGN STUDIO</h4>
-        <p>191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8</p>
-        <p>тел. +7 (812) 275-75-75</p>
-        <a class="button" href="#">
-          Напишите нам
-        </a>
-      </section>
-      <div class="footer-social">
-        <div class="footer-social-links">
-          <ul>
-            <li>
-              <a class="button-social button-social-vk" href="#">
-                <img src="img/vk-icon.svg" width="26" height="15" alt="Логотип «Вконтакте»">
+      <div class="footer-map">
+        <div class="container">
+          <section class="footer-contacts">
+            <div class="footer-contacts-container">
+              <h4>NЁRDS DESIGN STUDIO</h4>
+              <p>191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8</p>
+              <p>тел. +7 (812) 275-75-75</p>
+              <a class="button" href="#">
+                Напишите нам
               </a>
-            </li>
-            <li>
-              <a class="button-social button-social-fb" href="#">
-                <img src="img/fb-icon.svg" width="12" height="22" alt="Логотип «Фейсбук»">
-              </a>
-            </li>
-            <li>
-              <a class="button-social button-social-inst" href="#">
-                <img src="img/insta-icon.svg" width="21" height="21" alt="Логотип «Инстаграм»">
-              </a>
-            </li>
-          </ul>
+            </div>
+          </section>
         </div>
+      </div>
+      <div class="footer-social">
+        <ul class="footer-social-links">
+          <li>
+            <a class="button-social button-social-vk" href="#">
+              <img src="img/vk-icon.svg" width="26" height="15" alt="Логотип «Вконтакте»">
+            </a>
+          </li>
+          <li>
+            <a class="button-social button-social-fb" href="#">
+              <img src="img/fb-icon.svg" width="12" height="22" alt="Логотип «Фейсбук»">
+            </a>
+          </li>
+          <li>
+            <a class="button-social button-social-inst" href="#">
+              <img src="img/insta-icon.svg" width="21" height="21" alt="Логотип «Инстаграм»">
+            </a>
+          </li>
+        </ul>
         <div class="footer-social-slogan">
           <h3>Давайте дружить, это выгодно!</h3>
           <p>Скидка 10% для друзей из социальных сетей.</p>
