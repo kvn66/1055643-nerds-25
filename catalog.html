@@ -55,23 +55,27 @@
           <form class="filter-one" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-price">
               <legend>Стоимость:</legend>
-              <div class="slider-nativeMultiple">
-                <div class="nativeMultiple-one">
-                  <input min="0" max="20000" value="0" name="three" type="range" />
+              <div class="filter-price-range">
+                <div class="filter-price-range-controls">
+                  <div class="filter-price-scale">
+                    <div class="filter-price-bar">
+                    </div>
+                  </div>
+                  <div class="filter-price-toggle filter-price-toggle-min">
+                  </div>
+                  <div class="filter-price-toggle filter-price-toggle-max">
+                  </div>
                 </div>
-                <div class="nativeMultiple-two">
-                  <input min="0" max="20000" value="15000" type="range" />
+                <div class="filter-price-price-controls">
+                  <label class="filter-price-min-price">
+                    от
+                    <input name="min-price" type="text" value="0">
+                  </label>
+                  <label class="filter-price-max-price">
+                    до
+                    <input name="max-price" type="text" value="15000">
+                  </label>
                 </div>
-              </div>
-              <div class="filter-price-small-comtainer">
-                <label>
-                  От
-                  <input type="text" name="filter-min-price" value="0">
-                </label>
-                <label>
-                  До
-                  <input type="text" name="filter-max-price" value="15000">
-                </label>
               </div>
             </fieldset>
             <div class="filter-grid-container">
@@ -351,7 +355,7 @@
             <div class="email">
               <label>
                 <span>Ваш e-mail:</span>
-                <input type="text" name="email" placeholder="example@example.com">
+                <input type="text" name="email" placeholder="email@example.com">
               </label>
             </div>
           </div>
