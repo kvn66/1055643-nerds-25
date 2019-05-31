@@ -35,12 +35,10 @@
             </a>
           </li>
         </ul>
-        <div class="main-navigation-cart">
-          <a href="#">
-            <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
-            Корзина
-          </a>
-        </div>
+        <a class="main-navigation-cart" href="#">
+          <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
+          <span>Корзина</span>
+        </a>
       </nav>
     </header>
     <main>
@@ -53,50 +51,52 @@
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter-one" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter-price">
-              <legend>Стоимость:</legend>
-              <div class="filter-price-range">
-                <div class="filter-price-range-controls">
-                  <div class="filter-price-scale">
-                    <div class="filter-price-bar">
+            <div class="filter-price-container">
+              <fieldset class="filter-price">
+                <legend>Стоимость:</legend>
+                <div class="filter-price-range">
+                  <div class="filter-price-range-controls">
+                    <div class="filter-price-scale">
+                      <div class="filter-price-bar">
+                      </div>
+                    </div>
+                    <div class="filter-price-toggle filter-price-toggle-min">
+                    </div>
+                    <div class="filter-price-toggle filter-price-toggle-max">
                     </div>
                   </div>
-                  <div class="filter-price-toggle filter-price-toggle-min">
-                  </div>
-                  <div class="filter-price-toggle filter-price-toggle-max">
+                  <div class="filter-price-price-controls">
+                    <label class="filter-price-min-price">
+                      от
+                      <input name="min-price" type="text" value="0">
+                    </label>
+                    <label class="filter-price-max-price">
+                      до
+                      <input name="max-price" type="text" value="15000">
+                    </label>
                   </div>
                 </div>
-                <div class="filter-price-price-controls">
-                  <label class="filter-price-min-price">
-                    от
-                    <input name="min-price" type="text" value="0">
-                  </label>
-                  <label class="filter-price-max-price">
-                    до
-                    <input name="max-price" type="text" value="15000">
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
             <div class="filter-grid-container">
               <fieldset class="filter-grid">
                 <legend>Сетка:</legend>
                 <ul class="filter-grid-list">
                   <li>
-                    <label>
-                      <input type="radio" name="filter-grid" value="adaptive" checked>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="filter-grid" value="adaptive" id="filter-grid-adaptive" checked>
+                    <label for="filter-grid-adaptive">
                       Адаптивная
                     </label>
                   </li>
                   <li>
-                    <label>
-                      <input type="radio" name="filter-grid" value="fixed">
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="filter-grid" value="fixed" id="filter-grid-fixed">
+                    <label for="filter-grid-fixed">
                       Фиксированная
                     </label>
                   </li>
                   <li>
-                    <label>
-                      <input type="radio" name="filter-grid" value="rubber">
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="filter-grid" value="rubber" id="filter-grid-rubber">
+                    <label for="filter-grid-rubber">
                       Резиновая
                     </label>
                   </li>
@@ -108,39 +108,39 @@
                 <legend>Особенности:</legend>
                 <ul class="filter-options-list">
                   <li>
-                    <label>
-                      <input type="checkbox" name="slider" checked>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-options-slider" checked>
+                    <label for="filter-options-slider">
                       Слайдер
                     </label>
                   </li>
                   <li>
-                    <label>
-                      <input type="checkbox" name="futures">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="futures" id="filter-options-futures">
+                    <label for="filter-options-futures">
                       Блок преимуществ
                     </label>
                   </li>
                   <li>
-                    <label>
-                      <input type="checkbox" name="news" checked>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-options-news" checked>
+                    <label for="filter-options-news">
                       Новости
                     </label>
                   </li>
                   <li>
-                    <label>
-                      <input type="checkbox" name="gallery">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-options-gallery">
+                    <label for="filter-options-gallery">
                       Галерея
                     </label>
                   </li>
                   <li>
-                    <label>
-                      <input type="checkbox" name="order">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="order" id="filter-options-order">
+                    <label for="filter-options-order">
                       Корзина
                     </label>
                   </li>
                 </ul>
               </fieldset>
             </div>
-            <button type="submit">Показать</button>
+            <button class="button" type="submit">Показать</button>
           </form>
         </section>
         <section class="catalog">
