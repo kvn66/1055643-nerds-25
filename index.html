@@ -224,13 +224,13 @@
             <div class="fullname">
               <label>
                 <span>Ваше имя:</span>
-                <input type="text" name="fullname" placeholder="Имя Фамилия">
+                <input type="text" name="fullname" placeholder="Имя Фамилия" pattern="(^[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14}$)">
               </label>
             </div>
             <div class="email">
               <label>
                 <span>Ваш e-mail:</span>
-                <input type="text" name="email" placeholder="email@example.com">
+                <input type="email" name="email" placeholder="email@example.com">
               </label>
             </div>
           </div>
