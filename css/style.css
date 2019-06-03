@@ -30,13 +30,11 @@ body {
   margin: 0;
   padding: 0;
   min-width: 1200px;
-
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: normal;
   color: #000000;
-
   background-color: #ffffff;
 }
 
@@ -1051,17 +1049,18 @@ img {
   display: flex;
   justify-content: space-between;
   min-height: 133px;
-  align-items: center;
 }
 
 .sorting-header {
   width: 360px;
+  padding-top: 58px;
 }
 
 .sorting-body {
   display: flex;
   width: 360px;
   justify-content: space-between;
+  padding-top: 56px;
 }
 
 .sorting-list {
@@ -1072,6 +1071,7 @@ img {
   width: 271px;
   justify-content: space-between;
 }
+
 
 .sorting-buttons {
   display: flex;
@@ -1084,7 +1084,8 @@ img {
 .sorting-header h2 {
   font-size: 18px;
   line-height: 18px;
-  font-weight: 700;
+  font-weight: bold;
+  margin: 0;
   text-transform: uppercase;
 }
 
@@ -1102,6 +1103,7 @@ img {
 }
 
 .sorting a:active {
+  margin: 0;
   opacity: 1;
 }
 
@@ -1279,4 +1281,3 @@ img {
 
   /*background: rgba(0, 128, 0, 0.2);
   box-shadow: 0 0 0 3px green;*/
-
