@@ -669,22 +669,29 @@ img {
   z-index: 100;
 }
 
-.modal-write-us a {
+.modal--show {
+  display: flex;
+}
+
+.modal-write-us-close {
   position: absolute;
   width: 21px;
   height: 21px;
+  font-size: 0;
+  border: 0;
+  background: none;
   background-image: url("../img/close-cross.svg");
   top: 78px;
   right: 90px;
   opacity: 0.3;
 }
 
-.modal-write-us a:hover,
-.modal-write-us a:focus {
+.modal-write-us-close:hover,
+.modal-write-us-close:focus {
   opacity: 1;
 }
 
-.modal-write-us a:active {
+.modal-write-us-close:active {
   opacity: 0.1;
 }
 

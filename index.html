@@ -41,36 +41,52 @@
       </nav>
     </header>
     <main>
-    <section class="slider">
-      <div class="container">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-        <div class="slider-controls">
-          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
-          <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
-          <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
+      <section class="slider">
+        <div class="container">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+          <div class="slider-controls">
+            <label class="slider-controls-item slider-controls-item--1" for="product-1">
+              Первый
+            </label>
+            <label class="slider-controls-item slider-controls-item--2" for="product-2">
+              Второй
+            </label>
+            <label class="slider-controls-item slider-controls-item--3" for="product-3">
+              Третий
+            </label>
+          </div>
+          <ul class="slider-list">
+            <li class="slider-item">
+              <h3>Долго, дорого,<br>
+                скрупулезно.</h3>
+              <p>Математически выверенный дизайн<br>
+                для вашего сайта или мобильного приложения.</p>
+              <a class="slider-item-button button" href="#">
+                Узнать больше
+              </a>
+            </li>
+            <li class="slider-item">
+              <h3>Любим математику как никто другой</h3>
+              <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+              <a class="slider-item-button button" href="#">
+                Узнать больше
+              </a>
+            </li>
+            <li class="slider-item">
+              <h3>Только ночь,<br>
+                только хардкор</h3>
+              <p>Работать днем, как все? Мы против этого.<br>
+                Ближе к полуночи работа только начинается.</p>
+              <a class="slider-item-button button" href="#">
+                Узнать больше
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="slider-list">
-          <li class="slider-item">
-            <h3>Долго, дорого,<br> скрупулезно.</h3>
-            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-            <a class="slider-item-button button" href="#">Узнать больше</a>
-          </li>
-          <li class="slider-item">
-            <h3>Любим математику как никто другой</h3>
-            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-            <a class="slider-item-button button" href="#">Узнать больше</a>
-          </li>
-          <li class="slider-item">
-            <h3>Только ночь,<br> только хардкор</h3>
-            <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
-            <a class="slider-item-button button" href="#">Узнать больше</a>
-          </li>
-        </ul>  
-      </div>
-    </section>
+      </section>
       <div class="container">
         <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
         <section class="functions">
@@ -183,7 +199,7 @@
               <p>191186, Санкт-Петербург,<br>
                 ул. Б. Конюшенная, д. 19/8</p>
               <p>тел. +7 (812) 275-75-75</p>
-              <a class="button" href="#">
+              <a class="button modal-write-us-open" href="#">
                 Напишите нам
               </a>
             </div>
@@ -242,11 +258,10 @@
           <button class="button" type="submit">Отправить</button>
         </form>
       </div>
-      <a class="modal-write-us-close" href="#">
-        <span class="visually-hidden">Закрыть окно</span>
-      </a>
+      <button class="modal-write-us-close" type="button">Закрыть</button>
     </section>
     <div class="overlay">
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
