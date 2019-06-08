@@ -34,6 +34,7 @@ var toggleModal = function() {
 openPopupButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   toggleModal();
+  fullname.focus();
 
   if (storageAvailable("localStorage")) {
     if(localStorage.getItem("fullname")) {
