@@ -620,6 +620,10 @@ img {
 
 .footer-map iframe {
   position: relative;
+  width: 100%;
+  height: 416px;
+  border: none;
+  
   z-index: 1;
 }
 
