@@ -48,7 +48,7 @@ openPopupButton.addEventListener("click", function (evt) {
   }
 });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function () {
   if (fullname.value && email.value) {
     if (storageAvailable("localStorage")) {
       localStorage.setItem("fullname", fullname.value);
