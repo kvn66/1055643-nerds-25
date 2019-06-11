@@ -79,7 +79,7 @@ window.addEventListener("keydown", function (evt) {
     if (alertDialog.open) {
       alertDialog.close();
     } else {
-      if (popup.classList.contains("modal-show")) {
+      if (popup.classList.contains("modal--show")) {
         toggleModal();
       }
     }
