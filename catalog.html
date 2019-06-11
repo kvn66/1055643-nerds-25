@@ -150,7 +150,7 @@
             <div class="sorting-body">
               <ul class="sorting-list">
                 <li>
-                  <a href="#">
+                  <a class="selected" href="#">
                     По цене
                   </a>
                 </li>
@@ -166,7 +166,7 @@
                 </li>
               </ul>
               <div class="sorting-buttons">
-                <a href="#">
+                <a class="selected" href="#">
                   <img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировать по убыванию">
                 </a>
                 <a href="#">
@@ -302,17 +302,19 @@
     <footer class="main-footer">
       <div class="footer-map">
         <iframe src="https://yandex.ru/map-widget/v1/-/CCCtq83W" allowfullscreen></iframe>
-        <section class="footer-contacts">
-          <div class="footer-contacts-container">
-            <h4>NЁRDS DESIGN STUDIO</h4>
-            <p>191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</p>
-            <p>тел. +7 (812) 275-75-75</p>
-            <a class="button modal-write-us-open" href="form.html">
-              Напишите нам
-            </a>
-          </div>
-        </section>
-        <img src="img/map-marker.png" alt="Маркер на карте">
+        <div class="container">
+          <section class="footer-contacts">
+            <div class="footer-contacts-container">
+              <h4>NЁRDS DESIGN STUDIO</h4>
+              <p>191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</p>
+              <p>тел. +7 (812) 275-75-75</p>
+              <a class="button modal-write-us-open" href="form.html">
+                Напишите нам
+              </a>
+            </div>
+          </section>
+        </div>
+        <img src="img/map-marker.png" width="231" height="190" alt="Маркер на карте">
       </div>
       <div class="footer-social container">
         <ul class="footer-social-links">
@@ -346,20 +348,21 @@
             <div class="fullname">
               <label>
                 <span>Ваше имя:</span>
-                <input type="text" name="fullname" placeholder="Имя Фамилия" pattern="(^[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14}$)" required>
+                <input type="text" name="fullname" placeholder="Имя Фамилия" title="Введите данные в формате: Имя Фамилия"
+                pattern="(^[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14}$)">
               </label>
             </div>
             <div class="email">
               <label>
                 <span>Ваш e-mail:</span>
-                <input type="email" name="email" placeholder="email@example.com" required>
+                <input type="email" name="email" placeholder="email@example.com" title="Введите данные в формате: email@example.com">
               </label>
             </div>
           </div>
           <div class="message">
             <label>
               <span>Текст письма:</span>
-              <textarea name="message" placeholder="В свободной форме"></textarea>
+              <textarea name="message" placeholder="В свободной форме" title="Введите текст в свободной форме"></textarea>
             </label>
           </div>
           <button class="button" type="submit">Отправить</button>
@@ -369,6 +372,12 @@
     </section>
     <div class="overlay">
     </div>
-    <script src="js/script.js"></script>
+    <dialog class="alertDialog visually-hidden">  
+      <form method="dialog">
+        <p>Необходимо заполнить все поля.</p>
+        <button value="ok">Ok</button>
+      </form>
+    </dialog>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
