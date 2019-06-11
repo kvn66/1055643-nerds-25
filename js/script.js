@@ -6,7 +6,8 @@ var form = popup.querySelector("form");
 var fullname = popup.querySelector("[name=fullname]");
 var email = popup.querySelector("[name=email]");
 var message = popup.querySelector("[name=message]");
-var alertDialog = document.querySelector('.alertDialog');
+var alertDialog = document.querySelector(".alert-dialog");
+var alertDialogButton = document.querySelector(".alert-dialog-close");
 
 
 var storageAvailable = function(type) {
@@ -75,9 +76,12 @@ closePopupButton.addEventListener("click", function () {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    toggleModal();
-    if (popup.classList.contains("modal-show")) {
-      toggleModal();
+    if (alertDialog.open) {
+      alertDialog.close();
+    } else {
+      if (popup.classList.contains("modal-show")) {
+        toggleModal();
+      }
     }
   }
 });
@@ -85,3 +89,8 @@ window.addEventListener("keydown", function (evt) {
 overlay.addEventListener("click", function () {
   toggleModal();
 });
+
+alertDialogButton.addEventListener("click", function () {
+  alertDialog.close();
+});
+
