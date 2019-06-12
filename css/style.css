@@ -1436,16 +1436,7 @@ img {
   margin-right: 11px;
 }
 
-.pagination-item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.pagination-item .button {
   width: 50px;
   min-height: 50px;
   color: #000000;
@@ -1454,27 +1445,27 @@ img {
   font-weight: 500;
   text-transform: uppercase;
 
-  border-radius: 3px;
+  border: 3px solid #eeeeee;
   background-color: #eeeeee;
 }
 
-.pagination-item:last-child a {
+.pagination-item:last-child .button {
   width: 260px;
 }
 
-.pagination-item-current a {
+.pagination-item .pagination-item-current {
   border: 3px solid #dbdbdb;
   background-color: #ffffff;
 }
 
-.pagination-item:hover a,
-.pagination-item:focus a {
-  border: none;
+.pagination-item:hover .button,
+.pagination-item:focus .button {
+  border: 3px solid #dfdfdf;
   background-color: #dfdfdf;
 }
 
-.pagination-item:active a {
-  border: none;
+.pagination-item:active .button {
+  border: 3px solid #d5d5d5;
   background-color: #d5d5d5;
   color: rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
