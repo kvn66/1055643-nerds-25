@@ -9,7 +9,6 @@ var message = popup.querySelector("[name=message]");
 var alertDialog = document.querySelector(".alert-dialog");
 var alertDialogButton = document.querySelector(".alert-dialog-close");
 
-
 var storageAvailable = function(type) {
   var storage;
   try {
@@ -19,21 +18,23 @@ var storageAvailable = function(type) {
     storage.removeItem(x);
     return true;
   } catch (e) {
-    return e instanceof DOMException && (
-      e.code === 22 ||
-      e.code === 1014 ||
-      e.name === "QuotaExceededError" ||
-      e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
-      (storage && storage.length !== 0);
+    return (
+      e instanceof DOMException &&
+      (e.code === 22 ||
+        e.code === 1014 ||
+        e.name === "QuotaExceededError" ||
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      (storage && storage.length !== 0)
+    );
   }
-}
+};
 
-var toggleModal = function () {
+var toggleModal = function() {
   overlay.classList.toggle("overlay--show");
   popup.classList.toggle("modal--show");
-}
+};
 
-openPopupButton.addEventListener("click", function (evt) {
+openPopupButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   toggleModal();
   fullname.focus();
@@ -50,8 +51,14 @@ openPopupButton.addEventListener("click", function (evt) {
   }
 });
 
-form.addEventListener("submit", function (evt) {
-  if (fullname.value && email.value && message.value && fullname.validity.valid && email.validity.valid) {
+form.addEventListener("submit", function(evt) {
+  if (
+    fullname.value &&
+    email.value &&
+    message.value &&
+    fullname.validity.valid &&
+    email.validity.valid
+  ) {
     if (storageAvailable("localStorage")) {
       localStorage.setItem("fullname", fullname.value);
       localStorage.setItem("email", email.value);
@@ -69,11 +76,11 @@ form.addEventListener("submit", function (evt) {
   }
 });
 
-closePopupButton.addEventListener("click", function () {
+closePopupButton.addEventListener("click", function() {
   toggleModal();
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (alertDialog.open) {
@@ -86,11 +93,10 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-overlay.addEventListener("click", function () {
+overlay.addEventListener("click", function() {
   toggleModal();
 });
 
-alertDialogButton.addEventListener("click", function () {
+alertDialogButton.addEventListener("click", function() {
   alertDialog.close();
 });
-

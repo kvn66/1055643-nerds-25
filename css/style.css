@@ -632,11 +632,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  left: 1.7%;
-  top: 0;
-  -webkit-transform: translateY(-123%);
-      -ms-transform: translateY(-123%);
-          transform: translateY(-123%);
+  left: 20px;
+  top: -225px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 319px;
   min-height: 308px;
   margin: 10px 0;
@@ -675,7 +675,7 @@ img {
 .footer-contacts-container .button {
   width: 219px;
   min-height: 50px;
-  margin-top: 19px;
+  margin-top: 20px;
   padding: 16px 14px;
 }
 
@@ -743,8 +743,8 @@ img {
   -webkit-transform: translateX(-100%) translateY(-30%) scale(0);
       -ms-transform: translateX(-100%) translateY(-30%) scale(0);
           transform: translateX(-100%) translateY(-30%) scale(0);
-  -webkit-box-shadow: 0 15px 30px #646565;
-          box-shadow: 0 15px 30px #646565;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+          box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
   background-color: #ffffff;
   
   font-size: 16px;
@@ -1482,6 +1482,7 @@ img {
   line-height: 30px;
   font-weight: 700;
 }
+
 .alert-dialog-close {
   width: 50%;
   margin: 10% auto;
