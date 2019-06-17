@@ -31,12 +31,13 @@ body {
   margin: 0;
   padding: 0;
   min-width: 1200px;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
   color: #000000;
   background-color: #ffffff;
+  word-wrap: break-word;
 }
 
 a {
@@ -181,10 +182,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+     -ms-flex-align: end;
+        align-items: flex-end;
   margin-top: 0;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .main-navigation-current-page {
@@ -287,6 +289,7 @@ img {
   width: 18px;
   height: 18px;
   padding: 17px;
+  vertical-align: middle;
   
   border-radius: 50%;
   cursor: pointer;
@@ -546,33 +549,48 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #eeeeee;
   min-height: 182px;
   margin-bottom: 80px;
-  padding-top: 7px;
+  flex-wrap: wrap;
 }
 
 .partners-item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 260px;
+  min-height: 180px;
+  margin-right: 40px;
+  padding-top: 12px;
+}
+
+.partners-item::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 52px;
+  right: -21px;
+  top: 65px;
+  background-color: #eeeeee;
 }
 
 .partners-item:nth-child(4n) {
   margin-right: 0;
+}
+
+.partners-item:nth-child(4n)::after {
+  display: none;
 }
 
 .partners-item img {
@@ -1095,6 +1113,7 @@ img {
 .filter-price-price-controls label {
   display: inline-block;
   width: 50%;
+  vertical-align: middle;
   
   font-size: 16px;
   text-transform: uppercase;
@@ -1378,8 +1397,8 @@ img {
 .catalog-item-popup-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 240px;
   margin: 0 auto;
   text-align: center;
