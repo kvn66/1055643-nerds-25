@@ -44,15 +44,15 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .overlay {
@@ -187,12 +187,6 @@ img {
   margin-top: 0;
   text-transform: uppercase;
   font-weight: 500;
-  box-shadow: 0 0 0 3px green;
-}
-
-.main-navigation-current-page {
-  color: #000000;
-  border-bottom: 2px solid #fb565a;
 }
 
 .site-navigation {
@@ -206,7 +200,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  box-shadow: inset 0 0 0 2px purple;
 }
 
 .site-navigation li {
@@ -218,9 +211,8 @@ img {
   display: block;
   position: relative;
   color: #000000;
-  padding-top: 27px;
+  padding-top: 24px;
   min-height: 63px;
-  box-shadow: inset 0 0 0 2px purple;
 }
 
 .site-navigation a:hover,
@@ -233,27 +225,12 @@ img {
   opacity: 0.3;
 }
 
-.main-navigation-cart::after,
-.site-navigation a::after {
-  display: block;
-  position: absolute;
-  content: "";
-  min-width: 5px;
-  height: 2px;
-  bottom: 2px;
-  left: 0;
-  right: 0;
-  
-  background-color: #fb565a;
-}
-
 .main-navigation-cart {
   display: block;
   position: relative;
   margin-left: auto;
   min-height: 65px;
   padding-top: 26px;
-  box-shadow: inset 0 0 0 2px purple;
   padding-left: 41px;
 }
 
@@ -279,6 +256,24 @@ img {
 .main-navigation-cart:active span {
   color: #000000;
   opacity: 0.3;
+}
+
+.main-navigation-cart::after,
+.site-navigation a::after {
+  display: none;
+  position: absolute;
+  content: "";
+  min-width: 5px;
+  height: 2px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  
+  background-color: #fb565a;
+}
+
+.main-navigation .main-navigation-current-page::after {
+  display: block;
 }
 
 .slider {
@@ -577,7 +572,8 @@ img {
   border-bottom: 2px solid #eeeeee;
   min-height: 182px;
   margin-bottom: 80px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .partners-item {
@@ -692,7 +688,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 220px;
+  width: 219px;
   margin: 49px auto 45px;
   font-size: 16px;
   line-height: 18px;
@@ -715,7 +711,7 @@ img {
 .footer-contacts-container .button {
   width: 219px;
   min-height: 50px;
-  margin-top: 20px;
+  margin-top: 19px;
   padding: 16px 14px;
 }
 
@@ -1424,7 +1420,7 @@ img {
   width: 240px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 26px;
 }
 
 .catalog-item-popup h3 {
@@ -1460,7 +1456,7 @@ img {
   width: 200px;
   min-height: 50px;
   margin: 0 auto;
-  margin-bottom: 41px;
+  margin-bottom: 42px;
 }
 
 .pagination-list {
